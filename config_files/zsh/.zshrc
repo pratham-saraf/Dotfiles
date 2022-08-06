@@ -186,6 +186,8 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 ## Useful aliases
+#dotfiles
+alias dotfiles="/home/neo/.config/.scripts/dotfiles.sh"
 #spotify
 alias spotify="devour /usr/lib/brave-bin/brave --profile-directory=Default --app-id=pjibgclleladliembfgfagdaldikeohf"
 #minecraft
