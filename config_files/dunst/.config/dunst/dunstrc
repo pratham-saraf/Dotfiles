@@ -28,7 +28,7 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#95D1CC"
+    frame_color = "#F390AD"
     separator_color = "#121212"
     sort = yes
     font = Operator Mono 12
@@ -78,14 +78,14 @@
 
 [base16_low]
     msg_urgency = low
-    background = "#000000"
-    foreground = "#D9D7D6"
+    background = "#0C0A1A"
+    foreground = "#DFE3EA"
     timeout = 5
 
 [base16_normal]
     msg_urgency = normal
-    background = "#000000"
-    foreground = "#D9D7D6"
+    background = "#0C0A1A"
+    foreground = "#DFE3EA"
     timeout = 5
 
 [base16_critical]
@@ -95,21 +95,7 @@
     frame_color = "#151D3B"
     timeout = 0
 
-[signed_on]
-    appname = batteryWarning
-    summary = "*signed on*"
-    urgency = critical
-    script = ~/scripts/battery_warning.sh
 
-[signed_on]
-    appname = Pidgin
-    summary = "*signed on*"
-    urgency = critical
-    script = ~/scripts/battery_warning.sh
-
-[play_sound]
-    summary = "*"
-    script = ~/scripts/dunst-notif.sh
 
 #: Dunstrc {{{
 # See dunst(5) for all configuration options

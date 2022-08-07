@@ -1,11 +1,12 @@
 #
 
 # wm independent hotkeys
-#brightness
+#cliboard
 super + v
-		vivaldi-stable
+		rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+#brightness
 
-#F3
+F3
 	xbacklight +5
 
 F2
@@ -17,7 +18,9 @@ F2
 ##shutdown
 #super + u
 #		shutdown now
-
+# ranger
+super + x
+	bspc rule -a \* -o state=floating center=true rectangle=960x720+0+0 && kitty ranger . 
 #vs code
 super + comma
 			code
