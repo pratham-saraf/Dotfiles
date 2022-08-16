@@ -2,6 +2,11 @@
 # Dotfiles
 Dotfiles of my arch-based linux system
 
+<p align="center">
+ <img  src="https://visitor-badge.glitch.me/badge?page_id=pratham-saraf/Dotfiles.visitor-badge" >  
+ <img  alt="" src="https://img.shields.io/github/repo-size/pratham-saraf/Dotfiles?style=flat&label=repo-size&color=fb9199&labelColor=1d212a"/>
+</p>
+
 ## Screenshots
 
 
