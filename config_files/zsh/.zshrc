@@ -191,7 +191,7 @@ alias dotfiles="/home/neo/.config/.scripts/dotfiles.sh"
 #spotify
 alias spotify="devour /usr/lib/brave-bin/brave --profile-directory=Default --app-id=pjibgclleladliembfgfagdaldikeohf"
 #minecraft
-alias minecraft="cd /home/neo/windows/drive_2/Pratham/softwares/tlauncher/ && java -jar TLauncher-2.841.jar"
+alias minecraft="cd /home/psaraf/windows/drive_2/Pratham/softwares/tlauncher/ && java -jar TLauncher-2.841.jar"
 #wifi
 alias connect="nmcli d wifi connect"
 #ping

@@ -1,1 +1,5 @@
 config_files/zsh-history/
+config_files/nvim/.config/nvim/autoload/
+config_files/ranger/.config/ranger/colorschemes/__pycache__/
+config_files/ranger/.config/ranger/plugins/__pycache__/
+config_files/ranger/.config/ranger/plugins/ranger_devicons/__pycache__/
