@@ -187,6 +187,8 @@ bindkey "^[[1;5D" backward-word
 
 ## Useful aliases
 #dotfiles
+
+alias d="devour"
 alias time="curl monitoring-flask-deploy.herokuapp.com/time"
 alias dotfiles="/home/neo/.config/.scripts/dotfiles.sh"
 #spotify
