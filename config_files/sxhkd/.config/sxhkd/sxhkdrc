@@ -7,10 +7,10 @@ super + v
 #brightness
 
 F3
-	xbacklight +5
+	 light -A 5
 
 F2
-	xbacklight -5
+	light -U 5
 
 ##suspend
 #super + s
