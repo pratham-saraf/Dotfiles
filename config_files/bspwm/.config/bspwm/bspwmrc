@@ -31,3 +31,4 @@ zsh ~/.config/polybar/forest/launch.sh
 picom --experimental-backend --config $HOME/.config/picom/picom.conf 
 #clipboardManager
 greenclip daemon &
+nm-applet &
