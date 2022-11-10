@@ -190,6 +190,7 @@ bindkey "^[[1;5D" backward-word
 #dotfiles
 alias env="python3 -m venv env;echo 'created env';source env/bin/activate"
 alias d="devour"
+alias lp="cat ~/lek.t | copy"
 alias time="curl monitoring-flask-deploy.herokuapp.com/time"
 alias dotfiles="/home/neo/.config/.scripts/dotfiles.sh"
 #spotify
