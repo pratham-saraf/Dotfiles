@@ -191,10 +191,8 @@ bindkey "^[[1;5D" backward-word
 alias env="python3 -m venv env;echo 'created env';source env/bin/activate"
 alias d="devour"
 alias lp="cat ~/lek.t | copy"
-alias time="curl monitoring-flask-deploy.herokuapp.com/time"
 alias dotfiles="/home/neo/.config/.scripts/dotfiles.sh"
 #spotify
-alias spotify="devour /usr/lib/brave-bin/brave --profile-directory=Default --app-id=pjibgclleladliembfgfagdaldikeohf"
 #minecraft
 alias minecraft="cd /home/psaraf/windows/drive_2/Pratham/softwares/tlauncher/ && java -jar TLauncher-2.841.jar"
 #wifi
@@ -203,13 +201,13 @@ alias connect="nmcli d wifi connect"
 alias ping="ping google.com -c 5 | tail -3"
 #sauce
 alias sauce="/home/neo/.bruhhhhh/sauce-cli/sauce/sauce-cli"
+#create package list
+alias pkglist="pacman -Qq > $HOME/Dotfiles/config_files/package-list/.config/package.list" 
 #copy
 alias copy="xclip -selection clipboard"
 alias pdf="devour sioyek"
 #create a c++ and change into code dir
 alias cpp='cd && cd /home/neo/simulation_loader/simulation2/Pratham/coding/code/cPP/ && nvim trial.cpp'
-#focp
-alias focp='cd && cd simulation_loader/simulation2/Pratham/focp/ && nv 1.c'
 #connect
 #alias connect='nmcli d wifi connect "Samsung A32"'
 # Replace ls with exa
@@ -271,6 +269,13 @@ alias sq='sudo mysql -u root'
 alias wall='feh --bg-scale --no-fehbg --random'
 alias code='devour code .'
 alias sz='du -sh ./* | sort -h'
+
+yi() {
+  SELECTED_PKGS="$(yay -Slq | fzf --header='Install packages' -m --height 100% --preview 'yay -Si {1}')"
+  if [ -n "$SELECTED_PKGS" ]; then
+    yay -S $(echo $SELECTED_PKGS)
+  fi
+}
 
 spr (){
     cat "$@" \
