@@ -21,6 +21,9 @@ F2
 # ranger
 super + x
 	bspc rule -a \* -o state=floating center=true rectangle=960x720+0+0 && kitty ranger . 
+#eww bar
+super + a
+	eww open --toggle bar 
 #vs code
 super + comma
 			code
