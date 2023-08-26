@@ -3,3 +3,10 @@ config_files/nvim/.config/nvim/autoload/
 config_files/ranger/.config/ranger/colorschemes/__pycache__/
 config_files/ranger/.config/ranger/plugins/__pycache__/
 config_files/ranger/.config/ranger/plugins/ranger_devicons/__pycache__/
+config_files/fonts/.local/bin/
+config_files/fonts/.local/include/
+config_files/fonts/.local/lib/
+config_files/fonts/.local/state
+config_files/fonts/.local/share/*
+!config_files/fonts/.local/share/fonts/
+

@@ -36,7 +36,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'dracula/vim'
     "icons"
     Plug 'ryanoasis/vim-devicons'
-call plug#end()
+    "md preview"
+    Plug 'iamcco/markdown-preview.nvim'
+    call plug#end()
 
 "Config Section
 

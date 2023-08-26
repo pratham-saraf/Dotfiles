@@ -1,4 +1,6 @@
-#
+#lock screen
+super + shift + l
+	betterlockscreen -l dimblur
 
 # wm independent hotkeys
 #cliboard
@@ -12,6 +14,8 @@ F3
 F2
 	light -U 5
 
+super + b 
+	bspc rule -a \* -o state=floating center=true rectangle=960x720+0+0 && kitty bluetuith
 ##suspend
 #super + s
 #		systemctl suspend
@@ -26,20 +30,35 @@ super + a
 	eww open --toggle bar 
 #vs code
 super + comma
-			code
+			code-insiders
 #emoji
 super + period
 	rofimoji
 
 #volume controls
+XF86AudioPause
+	playerctl pause
+
+XF86AudioPlay
+	playerctl play
+
+XF86AudioStop
+	playerctl stop
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous
+
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 XF86AudioLowerVolume
-		 pactl -- set-sink-volume 0 -5%
+		 pactl -- set-sink-volume @DEFAULT_SINK@ -5%
 
 XF86AudioRaiseVolume
-			pactl -- set-sink-volume 0 +5%
+			pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 #screenshot
 Print
 	flameshot gui

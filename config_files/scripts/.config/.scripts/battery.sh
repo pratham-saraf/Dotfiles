@@ -1,26 +1,22 @@
 #!/bin/bash
 
-while true; do
-    # Get the current battery level and state
-    battery_info=$(acpi)
+# Get battery status and level
+battery_status=$(cat /sys/class/power_supply/BAT1/status)
+battery_level=$(acpi -b | grep -Eo "[0-9]+%" | cut -d '%' -f1)
 
-    # Extract the numeric part of the battery level from the output of the acpi command
-    battery_level=$(echo $battery_info | grep -Po '(\d+%)' | grep -Po '\d+')
-
-    # Read the threshold values as integer values
-    low_battery_threshold=10
-    critical_battery_threshold=15
-
-    # If the battery level is 15%, send a notification using dunst
-    if [ $battery_level -eq $critical_battery_threshold ]; then
-        dunstify -a "Low Battery" -u critical "The battery level is below 15%!"
+# Check if battery level is less than 10%
+if [ $battery_level -lt 10 ]; then
+    # Check if system is not charging
+    if [ "$battery_status" != "Charging" ]; then
+        # Send notification to plug in charger
+        dunstify -u critical "Low Battery" "Battery level is at ${battery_level}%. Please plug in the charger."
     fi
-
-    # If the battery level is below 10%, put the system into sleep mode
-    if [ $battery_level -lt $low_battery_threshold ]; then
-        systemctl suspend
+# Check if battery level is greater than or equal to 90%
+elif [ $battery_level -ge 90 ]; then
+    # Check if system is charging
+    if [ "$battery_status" == "Charging" ]; then
+        # Send notification to unplug charger
+        dunstify -u normal "High Battery" "Battery level is at ${battery_level}%. Please unplug the charger."
     fi
+fi
 
-    # Sleep for 60 seconds before checking the battery level again
-    sleep 60
-done
