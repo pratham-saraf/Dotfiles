@@ -8,8 +8,8 @@ super + v
 		rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 #brightness
 
-F3
-	 light -A 5
+#F3
+#	 light -A 5
 
 F2
 	light -U 5

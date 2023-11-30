@@ -1,10 +1,13 @@
-pfetch
 # Created by newuser for 5.8
 # If you come from bash you might have to change your $PATH.
 #pywal
 #wal -qi "/home/neo/simulation_loader/simulation2/Pratham/misc/wallpapers/wallhaven-q2mk17.jpg"
 #pokemon-colorscripts -r 1 --no-title
 #neofetch
+
+# hyprland
+export WLR_NO_HARDWARE_CURSORS=1
+export WLR_RENDERER_ALLOW_SOFTWARE=1
  
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export R_LIBS_USER="/home/neo/r-libs"
@@ -28,7 +31,6 @@ if [ -d "$HOME/.local/lib" ]; then
 fi
 
 #zoxide
-eval "$(zoxide init zsh)"
 
 # PS1='%F{green}%f%F{blue}%1~%f%F{green}%f$vcs_info_msg_0_ %F{magenta} %f '
 eval "$(starship init zsh)"
@@ -87,6 +89,7 @@ setopt pushdminus
 # Completion.
 autoload -Uz compinit
 compinit
+eval "$(zoxide init zsh)"
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
@@ -188,6 +191,7 @@ bindkey "^[[1;5D" backward-word
 
 ## Useful aliases
 #dotfiles
+alias hy="Hyprland"
 alias env="python3 -m venv .venv;echo 'created env';source .venv/bin/activate"
 alias d="devour"
 alias lp="cat ~/lek.t | copy"
@@ -269,6 +273,7 @@ alias sq='sudo mysql -u root'
 alias wall='feh --bg-scale --no-fehbg --random'
 alias code='devour code .'
 alias sz='du -sh ./* | sort -h'
+alias sx='startx'
 
 yi() {
   SELECTED_PKGS="$(yay -Slq | fzf --header='Install packages' -m --height 100% --preview 'yay -Si {1}')"

@@ -45,3 +45,6 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
+
+"to modify readonly files with w!!"
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
