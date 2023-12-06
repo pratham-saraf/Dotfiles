@@ -1,0 +1,55 @@
+#!/bin/sh
+
+# You can call this script like this:
+# $./volume.sh up
+# $./volume.sh down
+# $./volume.sh mute
+
+down() {
+  pamixer -d 5
+  volume=$(pamixer --get-volume)
+  [ $volume -gt 0 ] && volume=`expr $volume`
+  icon_name=/usr/share/icons/Papirus-Light/24x24/panel/xfce4-mixer-volume-high.svg
+  dunstify -a "VOLUME" "Volume is at $volume%" -h int:value:"$volume" -i $icon_name -r 2593 -u normal
+}
+
+up() {
+  pamixer -i 5
+  volume=$(pamixer --get-volume)
+  [ $volume -lt 100 ] && volume=`expr $volume`  
+  icon_name=/usr/share/icons/Papirus-Light/24x24/panel/xfce4-mixer-volume-high.svg
+  dunstify -a "VOLUME" "Volume is at $volume%" -h int:value:"$volume" -i $icon_name -r 2593 -u normal
+}
+
+mute() {
+  muted="$(pamixer --get-mute)"
+  if $muted; then
+    pamixer -u
+    icon_name=$XDG_DESKTOP_DIR/icons/volume-high.png
+    dunstify -a "VOLUME" "UNMUTED" -i $icon_name -r 2593 -u normal
+  else 
+    pamixer -m
+    icon_name=$XDG_DESKTOP_DIR/icons/volume-mute.png
+    dunstify -a "VOLUME" "MUTED" -i $icon_name -r 2593 -u normal
+  fi
+}
+
+toggle_mic() {
+  muted_mic=$(pactl get-source-mute @DEFAULT_SOURCE@ | cut -d ' ' -f 2)
+  if [[ "$muted_mic" == "no" ]]; then
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    icon_name=$XDG_DESKTOP_DIR/icons/microphone-mute.png
+    dunstify -a "MICROPHONE" "microphone mute" -i $icon_name -r 2593 -u normal
+  else
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    icon_name=$XDG_DESKTOP_DIR/icons/microphone.png
+    dunstify -a "MICROPHONE" "microphone on" -i $icon_name -r 2593 -u normal
+  fi
+}
+
+case "$1" in
+  up) up;;
+  down) down;;
+  mute) mute;;
+  toggle_mic) toggle_mic;;
+esac

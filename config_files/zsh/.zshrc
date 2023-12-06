@@ -198,7 +198,7 @@ alias lp="cat ~/lek.t | copy"
 alias dotfiles="/home/neo/.config/.scripts/dotfiles.sh"
 #spotify
 #minecraft
-alias minecraft="cd /home/psaraf/windows/drive_2/Pratham/softwares/tlauncher/ && java -jar TLauncher-2.841.jar"
+alias minecraft="cd ~/mc/ && java -jar TLauncher-2.885.jar"
 #wifi
 alias connect="nmcli d wifi connect"
 #ping
