@@ -385,3 +385,4 @@ export FZF_DEFAULT_OPTS="
 
 
 export PATH='/home/psaraf/.deta/bin:/home/psaraf/.local/bin:/home/psaraf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/psaraf/.fzf/bin'
+eval "$(_AUTO_CPUFREQ_COMPLETE=zsh_source auto-cpufreq)"
