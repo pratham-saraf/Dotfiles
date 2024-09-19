@@ -215,7 +215,7 @@ alias cpp='cd && cd /home/neo/simulation_loader/simulation2/Pratham/coding/code/
 #connect
 #alias connect='nmcli d wifi connect "Samsung A32"'
 # Replace ls with exa
-alias ls='exa -lah  --color=always --group-directories-first' # preferred listing
+alias ls='exa -lah  --color=always --group-directories-first --sort=modified' # preferred listing
 # alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 # alias ll='exa -l --color=always --group-directories-first'  # long format
 # alias lt='exa -aT --color=always --group-directories-first' # tree listing
@@ -385,4 +385,7 @@ export FZF_DEFAULT_OPTS="
 
 
 export PATH='/home/psaraf/.deta/bin:/home/psaraf/.local/bin:/home/psaraf/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/psaraf/.fzf/bin'
-eval "$(_AUTO_CPUFREQ_COMPLETE=zsh_source auto-cpufreq)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

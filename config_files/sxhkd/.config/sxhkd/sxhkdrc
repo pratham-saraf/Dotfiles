@@ -4,10 +4,15 @@ super + shift + l
 
 # wm independent hotkeys
 #cliboard
+ctrl +  g
+		cat /home/psaraf/.important/gitpat.txt | xclip -selection clipboard
 super + v
 		rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 #brightness
 
+# warpd
+super + shift + g
+		warpd --hint --config ~/.config/warpd/config
 #F3
 #	 light -A 5
 
