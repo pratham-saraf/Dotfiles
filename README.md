@@ -20,3 +20,6 @@ Dotfiles of my arch-based linux system
 
 
 
+
+## macOS
+See [`macos/`](macos/README.md) for the current macOS setup (zsh, git, nvim, kitty, Brewfile, one-command install).

@@ -1,0 +1,51 @@
+{
+  "attribution": {
+    "commit": ""
+  },
+  "permissions": {
+    "deny": [
+      "Artifact"
+    ],
+    "defaultMode": "auto"
+  },
+  "model": "sonnet",
+  "disableArtifact": true,
+  "enabledPlugins": {
+    "homunculus@homunculus": true
+  },
+  "extraKnownMarketplaces": {
+    "qmd": {
+      "source": {
+        "source": "github",
+        "repo": "tobi/qmd"
+      }
+    },
+    "homunculus": {
+      "source": {
+        "source": "github",
+        "repo": "humanplane/homunculus"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    }
+  },
+  "effortLevel": "medium",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "tui": "fullscreen",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": false,
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
+}

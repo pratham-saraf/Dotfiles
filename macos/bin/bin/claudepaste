@@ -1,0 +1,10 @@
+#!/bin/zsh
+HOST="${CLIPHOST:ubuntu@Trading-Agent}"
+
+if [[ -z "$HOST" ]]; then
+  echo "❌ Set your host first (edit this script or export CLIPHOST=...)"
+  return 1
+fi
+
+echo "📤 Uploading clipboard image with PasteHop..."
+ph attach --host "$HOST"

@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Pratham Saraf
+	email = prathammsaraf@gmail.com
+# Please adapt and uncomment the following lines:
+#	name = Pratham Saraf
+#	email = prathammsaraf@gmail.com 
+[credential "https://github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !gh auth git-credential

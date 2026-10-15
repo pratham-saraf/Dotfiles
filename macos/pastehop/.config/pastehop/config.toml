@@ -1,0 +1,11 @@
+enabled_keybindings = ["CTRL+V"]
+cleanup_ttl_hours = 24
+default_path_profile = "plain-path"
+
+[hosts."ubuntu@Trading-Agent"]
+allowed = true
+
+[size_limits]
+max_single_file_bytes = 26214400
+max_total_bytes = 104857600
+max_files = 10
